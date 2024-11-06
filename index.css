@@ -1,0 +1,157 @@
+*{box-sizing: border-box;}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Inter", sans-serif;
+    display: grid;
+    grid-template-rows: 16vh 72vh 12vh;
+    grid-template-areas: 
+    "navi"
+    "main"
+    "foot";
+}
+
+nav, main, footer{
+    max-width: 550px;
+    margin: 0 auto;
+    width: 100%;
+}
+/*========================
+        NAV SECTION
+========================*/
+nav, .nav-container, .main-container, .footer-container{
+    height: 100%;
+}
+nav{
+    grid-area: navi;   
+}
+
+.nav-container{
+    display: grid;
+    grid-template-columns: 9fr 57fr 22fr;
+    grid-template-areas: 
+    "lada drop btn";
+    align-content: center;
+    
+   
+}
+
+.nav-lada{
+    grid-area: lada;
+    background: red;
+}
+
+.color-input-nav{
+    height: 100%;
+    width: 100%;
+}
+
+.nav-drop-down{
+    grid-area: drop;
+    display: flex;
+    justify-content: start;
+    gap: 0.75rem;
+}
+select{
+    width: 93%;
+    border: 1px solid #D1D5DB;
+    border-radius: 6px;
+    padding: 0.5625em 0.8125em;
+    -webkit-appearance: none;
+}
+
+select option {
+    border-radius: 6px;
+    padding: 0.5625rem 0.8125rem;
+}
+
+.nav-btn{
+   
+    grid-area: btn;
+    background-color: white;
+    border: 1px solid #D1D5DB;
+    border-radius: 4px;
+    font-size: 0.75rem; /*12px*/
+    padding: 1.083em 0.916em;
+    align-self: center;
+    justify-self: center;
+   
+}
+
+/*========================
+        MAIN SECTION
+========================*/
+main{
+    grid-area: main;
+    
+    
+}
+
+.main-container{
+    
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: "ones twos thre four five";
+    
+}
+
+.one{
+    grid-area: ones;
+}
+
+.two{
+  grid-area: twos;  
+}
+
+.three{
+  grid-area: thre;  
+}
+
+.four{
+  grid-area: four;  
+}
+
+.five{
+  grid-area: five;  
+}
+
+
+/*========================
+        FOOTER SECTION
+========================*/
+footer{
+    grid-area: foot;
+    
+}
+
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: "ones twos thre four five";
+}
+
+.hex{
+    text-align: center;
+    padding: 1rem;
+}
+/*========================
+      MEDIA QUERIES
+========================*/
+
+@media(max-width: 600px){
+    body{
+       
+        
+    }
+}
+/*========================
+      UTILITY SECTION
+========================*/
+
+.border{
+    border: 2px solid #D1D5DB;
+    border-radius: 6px;
+}
